@@ -1,0 +1,20 @@
+---
+# tasks file for ansible-role-simple
+- name: write to file
+  copy:
+    content: |
+      {{ message }}
+    dest: "{{ target_dir }}/abc.txt"
+    mode: 0644
+
+- name: locate static file
+  copy:
+    src: def.txt
+    dest: "{{ target_dir }}/"
+    mode: 0644
+
+- name: locale file from template
+  template:
+    src: ghi.txt.j2
+    dest: "{{ target_dir }}/"
+    mode: 0644

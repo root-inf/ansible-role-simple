@@ -1,0 +1,14 @@
+---
+# tasks file for ansible-role-simple
+- name: read content from file
+  slurp:
+    src: "{{ target_dir }}/{{ item }}"
+    register: ret
+  loop:
+    - abc.txt
+    - def.txt
+    - ghi.txt
+
+- name: confirm content from file
+  debug:
+    var: ret

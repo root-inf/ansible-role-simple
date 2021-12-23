@@ -1,0 +1,12 @@
+---
+# tasks file for ansible-role-simple
+- name: Test variables are OK
+  assert:
+    that:
+      - message is defined
+      - message is string
+      - target_dir is defined
+      - target_dir is string
+    fail_msg: |
+      message: {{ message | d() }}
+      target_dir: {{ target_dir | d() }}

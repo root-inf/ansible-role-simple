@@ -11,5 +11,4 @@
 
 - name: confirm content from file
   debug:
-    msg: "{{ item }}"
-  loop: "{{ ret | dict2items }}"
+    var: ret

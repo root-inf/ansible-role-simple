@@ -12,4 +12,4 @@
 - name: confirm content from file
   debug:
     msg: "{{ item.content | b64decode }}"
-  loop: ret
+  loop: "{{ ret }}"

@@ -1,0 +1,4 @@
+---
+# defaults file for ansible-role-simple
+message: Hello
+target_dir: /tmp

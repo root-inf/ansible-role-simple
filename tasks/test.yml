@@ -3,7 +3,7 @@
 - name: read content from file
   slurp:
     src: "{{ target_dir }}/{{ item }}"
-    register: ret
+  register: ret
   loop:
     - abc.txt
     - def.txt

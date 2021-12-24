@@ -11,5 +11,5 @@
 
 - name: confirm content from file
   debug:
-    msg: "{{ item.content | b64decode }}"
+    msg: "{{ item }}"
   loop: "{{ ret | dict2items }}"

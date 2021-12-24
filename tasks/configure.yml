@@ -16,5 +16,5 @@
 - name: locale file from template
   template:
     src: ghi.txt.j2
-    dest: "{{ target_dir }}/"
+    dest: "{{ target_dir }}/ghi.txt"
     mode: 0644

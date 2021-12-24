@@ -11,4 +11,5 @@
 
 - name: confirm content from file
   debug:
-    var: ret
+    msg: "{{ item.content | b64decode }}"
+  loop: ret
